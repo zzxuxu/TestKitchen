@@ -87,7 +87,7 @@ class MainTabBarViewController: UITabBarController {
             //1.1取消选中之前的按钮
             let lastBtn = bgView?.viewWithTag(300+selectedIndex) as! UIButton
             lastBtn.selected = false
-            curBtn.userInteractionEnabled = true
+            lastBtn.userInteractionEnabled = true
 
             //1.2选中当前的按钮
             curBtn.selected = true
