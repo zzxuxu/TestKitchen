@@ -18,16 +18,17 @@ class MainTabBarViewController: UITabBarController {
 
         //创建视图控制器
         createViewControllers()
-
+        /*
         //隐藏系统的tabbar
         tabBar.hidden = true
 
         //自定制tabbar
         createMyTabBar()
+         */
     }
 
     //自定制tabbar
-    func createMyTabBar() {
+    func createMyTabBar(imageNames: Array<String>, titles: Array<String>) {
 
         //1.创建背景视图
         bgView = UIView.createView()
@@ -41,11 +42,11 @@ class MainTabBarViewController: UITabBarController {
             make.height.equalTo(49)
         })
 
-        //图片的名字
-        let imageNames = ["home","community","shop","shike","mine"]
-
-        //标题文字
-        let titles = ["食材","社区","商城","食课","我的"]
+//        //图片的名字
+//        let imageNames = ["home","community","shop","shike","mine"]
+//
+//        //标题文字
+//        let titles = ["食材","社区","商城","食课","我的"]
 
         //循环创建按钮
         let width = kScreenW/CGFloat(imageNames.count)
@@ -69,6 +70,11 @@ class MainTabBarViewController: UITabBarController {
 
             //2.2 显示标题
             let titleLabel = UILabel.createLabel(titles[i], textAlignment: .Center, font: UIFont.systemFontOfSize(10))
+
+            //设置文字颜色
+            titleLabel.textColor = UIColor.lightGrayColor()
+            titleLabel.tag = 400
+
             btn.addSubview(titleLabel)
 
             //设置位置
@@ -76,6 +82,12 @@ class MainTabBarViewController: UITabBarController {
                 make.left.right.bottom.equalTo(btn)
                 make.height.equalTo(20)
             })
+
+            //默认选中第一个按钮
+            if i == 0 {
+                btn.selected = true
+                titleLabel.textColor = UIColor.orangeColor()
+            }
         }
     }
 
@@ -89,9 +101,15 @@ class MainTabBarViewController: UITabBarController {
             lastBtn.selected = false
             lastBtn.userInteractionEnabled = true
 
+            let lastLabel = lastBtn.viewWithTag(400) as! UILabel
+            lastLabel.textColor = UIColor.lightGrayColor()
+
             //1.2选中当前的按钮
             curBtn.selected = true
             curBtn.userInteractionEnabled = false
+
+            let curLabel = curBtn.viewWithTag(400) as! UILabel
+            curLabel.textColor = UIColor.orangeColor()
 
             //1.3切换视图控制器
             selectedIndex = index
@@ -99,15 +117,64 @@ class MainTabBarViewController: UITabBarController {
     }
     //创建视图控制器
     func createViewControllers() {
-        //视图控制器的名字
-        let nameArray = ["IngredientViewController","CommunityViewController","MallViewController","FoodClassViewController","ProfileViewController"]
 
-        //图片的名字
-        let imageNames = ["home","community","shop","shike","mine"]
+        //1.从Controllers.json文件里面读取数据
+        let path = NSBundle.mainBundle().pathForResource("Controllers", ofType: "json")
+
+        let data = NSData(contentsOfFile: path!)
+
+        //视图控制器名字的数组
+        var nameArray = [String]()
+
+        //图片名字
+        var images = [String]()
 
         //标题文字
-        let titles = ["食材","社区","商城","食课","我的"]
+        var titles = [String]()
 
+        do {
+
+            //可能抛异常的代码写在这里
+            let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers)
+            if json.isKindOfClass(NSArray) {
+                let tmpArray = json as! Array<Dictionary<String,String>>
+
+                //遍历获取视图控制器的名字
+                for tmpDict in tmpArray {
+                    //视图控制器
+                    let name = tmpDict["ctrlname"]
+                    nameArray.append(name!)
+                    //图片
+                    let imageName = tmpDict["image"]
+                    images.append(imageName!)
+                    //标题
+                    let title = tmpDict["title"]
+                    titles.append(title!)
+                }
+            }
+
+        }catch (let error) {
+            //捕获错误信息
+            print(error)
+        }
+
+        //如果获取的数组有错误
+        if nameArray.count == 0 {
+            nameArray = ["IngredientViewController","CommunityViewController","MallViewController","FoodClassViewController","ProfileViewController"]
+            images = ["home","community","shop","shike","mine"]
+            titles = ["食材","社区","商城","食课","我的"]
+        }
+
+        //视图控制器的名字
+//        let nameArray = ["IngredientViewController","CommunityViewController","MallViewController","FoodClassViewController","ProfileViewController"]
+
+//        //图片的名字
+//        let imageNames = ["home","community","shop","shike","mine"]
+//
+//        //标题文字
+//        let titles = ["食材","社区","商城","食课","我的"]
+
+        //2.创建视图控制器
         //视图控制器对象的数组
         var ctrlArray = Array<UINavigationController>()
         for i in 0..<nameArray.count {
@@ -119,13 +186,13 @@ class MainTabBarViewController: UITabBarController {
 
             let vc = ctrl.init()
 
-            //设置图片和文字
-            vc.tabBarItem.title = titles[i]
-            let imageName = imageNames[i]+"_normal"
-            vc.tabBarItem.image = UIImage(named: imageName)
-
-            let selectName = imageNames[i]+"_select"
-            vc.tabBarItem.selectedImage = UIImage(named: selectName)
+//            //设置图片和文字
+//            vc.tabBarItem.title = titles[i]
+//            let imageName = imageNames[i]+"_normal"
+//            vc.tabBarItem.image = UIImage(named: imageName)
+//
+//            let selectName = imageNames[i]+"_select"
+//            vc.tabBarItem.selectedImage = UIImage(named: selectName)
 
             //导航
             let navCtrl = UINavigationController(rootViewController: vc)
@@ -133,6 +200,13 @@ class MainTabBarViewController: UITabBarController {
         }
 
         viewControllers = ctrlArray
+
+        //3.设置图片和文字
+        //隐藏系统的tabbar
+        tabBar.hidden = true
+
+        //自定制tabbar
+        createMyTabBar(images, titles: titles)
     }
 
     override func didReceiveMemoryWarning() {

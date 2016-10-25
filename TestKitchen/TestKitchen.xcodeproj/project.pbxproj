@@ -46,6 +46,15 @@
 		215E1E951DB9B98200F7C877 /* UIView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1E941DB9B98200F7C877 /* UIView+Common.swift */; };
 		215E1E971DB9BA2100F7C877 /* UILabel+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1E961DB9BA2100F7C877 /* UILabel+Common.swift */; };
 		215E1E991DB9BB8C00F7C877 /* UIButton+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215E1E981DB9BB8C00F7C877 /* UIButton+Common.swift */; };
+		217AAE761DBEED4B00B5D815 /* IngreRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217AAE751DBEED4B00B5D815 /* IngreRecommendView.swift */; };
+		217AAE791DBEF39400B5D815 /* IngreBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217AAE771DBEF39400B5D815 /* IngreBannerCell.swift */; };
+		217AAE7A1DBEF39400B5D815 /* IngreBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217AAE781DBEF39400B5D815 /* IngreBannerCell.xib */; };
+		217AAE7C1DBEF82000B5D815 /* sdefaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 217AAE7B1DBEF82000B5D815 /* sdefaultImage.png */; };
+		217AAE7F1DBF09F300B5D815 /* IngreLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217AAE7D1DBF09F300B5D815 /* IngreLikeCell.swift */; };
+		217AAE801DBF09F300B5D815 /* IngreLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217AAE7E1DBF09F300B5D815 /* IngreLikeCell.xib */; };
+		219A7CAE1DBD9BF4006E11E9 /* Controllers.json in Resources */ = {isa = PBXBuildFile; fileRef = 219A7CAD1DBD9BF4006E11E9 /* Controllers.json */; };
+		21BC06721DBDACDF008893B1 /* KTCDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC06711DBDACDF008893B1 /* KTCDownload.swift */; };
+		21BC06741DBDB6CC008893B1 /* IngreRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC06731DBDB6CC008893B1 /* IngreRecommend.swift */; };
 		21FFDDE11DB9C38900B6CDE8 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FFDDE01DB9C38900B6CDE8 /* Const.swift */; };
 		E569A0AAB685D84BF595DFD6 /* Pods_TestKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F159E8B58060D3E4F909390 /* Pods_TestKitchen.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +121,15 @@
 		215E1E941DB9B98200F7C877 /* UIView+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Common.swift"; sourceTree = "<group>"; };
 		215E1E961DB9BA2100F7C877 /* UILabel+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Common.swift"; sourceTree = "<group>"; };
 		215E1E981DB9BB8C00F7C877 /* UIButton+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Common.swift"; sourceTree = "<group>"; };
+		217AAE751DBEED4B00B5D815 /* IngreRecommendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreRecommendView.swift; sourceTree = "<group>"; };
+		217AAE771DBEF39400B5D815 /* IngreBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreBannerCell.swift; sourceTree = "<group>"; };
+		217AAE781DBEF39400B5D815 /* IngreBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreBannerCell.xib; sourceTree = "<group>"; };
+		217AAE7B1DBEF82000B5D815 /* sdefaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sdefaultImage.png; sourceTree = "<group>"; };
+		217AAE7D1DBF09F300B5D815 /* IngreLikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreLikeCell.swift; sourceTree = "<group>"; };
+		217AAE7E1DBF09F300B5D815 /* IngreLikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreLikeCell.xib; sourceTree = "<group>"; };
+		219A7CAD1DBD9BF4006E11E9 /* Controllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Controllers.json; sourceTree = "<group>"; };
+		21BC06711DBDACDF008893B1 /* KTCDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTCDownload.swift; sourceTree = "<group>"; };
+		21BC06731DBDB6CC008893B1 /* IngreRecommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreRecommend.swift; sourceTree = "<group>"; };
 		21FFDDE01DB9C38900B6CDE8 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		2F159E8B58060D3E4F909390 /* Pods_TestKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1576A6846E85E9BC5F3802 /* Pods-TestKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,9 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				215E1E221DB9A89100F7C877 /* Common */,
+				215E1E291DB9A89100F7C877 /* Ingredient */,
 				215E1E231DB9A89100F7C877 /* Community */,
 				215E1E281DB9A89100F7C877 /* FoodClass */,
-				215E1E291DB9A89100F7C877 /* Ingredient */,
 				215E1E3A1DB9A89100F7C877 /* Mall */,
 				215E1E3F1DB9A89100F7C877 /* Profile */,
 			);
@@ -222,6 +240,8 @@
 				215E1E961DB9BA2100F7C877 /* UILabel+Common.swift */,
 				215E1E981DB9BB8C00F7C877 /* UIButton+Common.swift */,
 				21FFDDE01DB9C38900B6CDE8 /* Const.swift */,
+				219A7CAD1DBD9BF4006E11E9 /* Controllers.json */,
+				21BC06711DBDACDF008893B1 /* KTCDownload.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -277,10 +297,10 @@
 		215E1E291DB9A89100F7C877 /* Ingredient */ = {
 			isa = PBXGroup;
 			children = (
-				215E1E2A1DB9A89100F7C877 /* category */,
 				215E1E2E1DB9A89100F7C877 /* main */,
-				215E1E321DB9A89100F7C877 /* Material */,
 				215E1E361DB9A89100F7C877 /* Recommend */,
+				215E1E2A1DB9A89100F7C877 /* category */,
+				215E1E321DB9A89100F7C877 /* Material */,
 			);
 			path = Ingredient;
 			sourceTree = "<group>";
@@ -337,6 +357,7 @@
 		215E1E301DB9A89100F7C877 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				21BC06731DBDB6CC008893B1 /* IngreRecommend.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -344,6 +365,7 @@
 		215E1E311DB9A89100F7C877 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				217AAE751DBEED4B00B5D815 /* IngreRecommendView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -406,6 +428,10 @@
 		215E1E391DB9A89100F7C877 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				217AAE771DBEF39400B5D815 /* IngreBannerCell.swift */,
+				217AAE781DBEF39400B5D815 /* IngreBannerCell.xib */,
+				217AAE7D1DBF09F300B5D815 /* IngreLikeCell.swift */,
+				217AAE7E1DBF09F300B5D815 /* IngreLikeCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -542,6 +568,7 @@
 		215E1E631DB9AF8800F7C877 /* 公共 */ = {
 			isa = PBXGroup;
 			children = (
+				217AAE7B1DBEF82000B5D815 /* sdefaultImage.png */,
 			);
 			path = "公共";
 			sourceTree = "<group>";
@@ -747,7 +774,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217AAE7C1DBEF82000B5D815 /* sdefaultImage.png in Resources */,
 				215E1E841DB9AF8800F7C877 /* home_normal@2x.png in Resources */,
+				219A7CAE1DBD9BF4006E11E9 /* Controllers.json in Resources */,
 				215E1E931DB9AF8800F7C877 /* shop_select@3x.png in Resources */,
 				215E1E861DB9AF8800F7C877 /* home_select@2x.png in Resources */,
 				215E1E901DB9AF8800F7C877 /* shop_normal@2x.png in Resources */,
@@ -757,6 +786,8 @@
 				215E1E871DB9AF8800F7C877 /* home_select@3x.png in Resources */,
 				215E1E831DB9AF8800F7C877 /* community_select@3x.png in Resources */,
 				215E1E4D1DB9A89100F7C877 /* Info.plist in Resources */,
+				217AAE801DBF09F300B5D815 /* IngreLikeCell.xib in Resources */,
+				217AAE7A1DBEF39400B5D815 /* IngreBannerCell.xib in Resources */,
 				215E1E801DB9AF8800F7C877 /* community_normal@2x.png in Resources */,
 				215E1E8F1DB9AF8800F7C877 /* shike_select@3x.png in Resources */,
 				215E1E8B1DB9AF8800F7C877 /* mine_select@3x.png in Resources */,
@@ -846,9 +877,13 @@
 				215E1E4F1DB9A89100F7C877 /* ViewController.swift in Sources */,
 				215E1E511DB9A90900F7C877 /* BaseViewController.swift in Sources */,
 				215E1E951DB9B98200F7C877 /* UIView+Common.swift in Sources */,
+				217AAE791DBEF39400B5D815 /* IngreBannerCell.swift in Sources */,
 				215E1E551DB9AA0B00F7C877 /* CommunityViewController.swift in Sources */,
 				215E1E4E1DB9A89100F7C877 /* TestKitchen.xcdatamodeld in Sources */,
+				21BC06721DBDACDF008893B1 /* KTCDownload.swift in Sources */,
+				217AAE7F1DBF09F300B5D815 /* IngreLikeCell.swift in Sources */,
 				215E1E571DB9AA2E00F7C877 /* MallViewController.swift in Sources */,
+				217AAE761DBEED4B00B5D815 /* IngreRecommendView.swift in Sources */,
 				215E1E991DB9BB8C00F7C877 /* UIButton+Common.swift in Sources */,
 				215E1E611DB9AB7E00F7C877 /* MainTabBarViewController.swift in Sources */,
 				215E1E5D1DB9AA7B00F7C877 /* FoodClassViewController.swift in Sources */,
@@ -856,6 +891,7 @@
 				215E1E971DB9BA2100F7C877 /* UILabel+Common.swift in Sources */,
 				215E1E531DB9A9D800F7C877 /* IngredientViewController.swift in Sources */,
 				215E1E491DB9A89100F7C877 /* AppDelegate.swift in Sources */,
+				21BC06741DBDB6CC008893B1 /* IngreRecommend.swift in Sources */,
 				21FFDDE11DB9C38900B6CDE8 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1005,11 +1041,13 @@
 			baseConfigurationReference = 7C1576A6846E85E9BC5F3802 /* Pods-TestKitchen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WJX.TestKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1018,11 +1056,13 @@
 			baseConfigurationReference = 96FA43434E70A9A59840F5F1 /* Pods-TestKitchen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WJX.TestKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
