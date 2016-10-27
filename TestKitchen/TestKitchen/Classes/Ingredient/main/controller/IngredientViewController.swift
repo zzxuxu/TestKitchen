@@ -58,6 +58,11 @@ extension IngredientViewController:KTCDownloadDelegate {
             recommendView.model = recommendModel
             view.addSubview(recommendView)
 
+            //3.点击食材的推荐页面的某一部分，跳转到后面的界面
+            recommendView.jumpClosure = { jumpUrl in
+                print(jumpUrl)
+            }
+
             //约束
             recommendView.snp_makeConstraints(closure: { (make) in
                 make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))

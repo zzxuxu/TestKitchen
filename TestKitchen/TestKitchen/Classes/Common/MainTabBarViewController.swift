@@ -33,8 +33,7 @@ class MainTabBarViewController: UITabBarController {
         //1.创建背景视图
         bgView = UIView.createView()
         bgView?.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
-        bgView?.layer.borderColor = UIColor.blackColor().CGColor
-        bgView?.layer.borderWidth = 1
+ 
         view.addSubview(bgView!)
 
         bgView?.snp_makeConstraints(closure: {[weak self] (make) in

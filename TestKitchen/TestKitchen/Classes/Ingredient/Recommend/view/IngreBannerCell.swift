@@ -10,6 +10,8 @@ import UIKit
 
 class IngreBannerCell: UITableViewCell {
 
+    var jumpClosure: IngreJumpClosure?
+
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var pageCtrl: UIPageControl!
@@ -24,6 +26,13 @@ class IngreBannerCell: UITableViewCell {
 
     //显示数据
     private func showData() {
+
+        //滚动视图系统默认添加了一些子视图，删除子视图时要考虑会不会影响
+
+        //删除滚动视图之前的子视图
+        for sub in scrollView.subviews {
+            sub.removeFromSuperview()
+        }
 
         //遍历添加图片
         let cnt = bannerArray?.count
@@ -52,6 +61,12 @@ class IngreBannerCell: UITableViewCell {
                 tmpImageView.kf_setImageWithURL(url!, placeholderImage: UIImage(named: "sdefaultImage"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
                 containerView.addSubview(tmpImageView)
 
+                //添加点击事件
+                tmpImageView.userInteractionEnabled = true
+                tmpImageView.tag = 200+i
+                let g = UITapGestureRecognizer(target: self, action: #selector(tapImage(_:)))
+                tmpImageView.addGestureRecognizer(g)
+
                 //图片的约束
                 tmpImageView.snp_makeConstraints(closure: { (make) in
                     make.top.bottom.equalTo(containerView)
@@ -76,6 +91,17 @@ class IngreBannerCell: UITableViewCell {
             pageCtrl.numberOfPages = cnt!
         }
 
+    }
+
+    func tapImage(g:UIGestureRecognizer){
+        let index = (g.view?.tag)! - 200
+
+        //获取点击的数据
+        let banner = bannerArray![index]
+
+        if jumpClosure != nil && banner.banner_link != nil {
+            jumpClosure!(banner.banner_link!)
+        }
     }
 
     //创建cell的方法

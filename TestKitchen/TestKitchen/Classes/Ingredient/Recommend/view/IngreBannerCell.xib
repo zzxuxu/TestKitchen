@@ -21,7 +21,7 @@
                         </connections>
                     </scrollView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-Pz-rZn">
-                        <rect key="frame" x="265" y="109" width="100" height="20"/>
+                        <rect key="frame" x="265" y="99" width="100" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="CNO-hv-IaO"/>
                             <constraint firstAttribute="width" constant="100" id="Yxx-g7-x36"/>
@@ -35,7 +35,7 @@
                     <constraint firstAttribute="bottom" secondItem="zp0-I2-t3F" secondAttribute="bottom" id="n8f-ie-Sci"/>
                     <constraint firstItem="zp0-I2-t3F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="q6Q-Pm-ZHz"/>
                     <constraint firstAttribute="trailing" secondItem="UHX-Pz-rZn" secondAttribute="trailing" constant="10" id="s1K-kv-Rxg"/>
-                    <constraint firstAttribute="bottom" secondItem="UHX-Pz-rZn" secondAttribute="bottom" constant="10" id="sXg-mm-OTc"/>
+                    <constraint firstAttribute="bottom" secondItem="UHX-Pz-rZn" secondAttribute="bottom" constant="20" id="sXg-mm-OTc"/>
                     <constraint firstItem="zp0-I2-t3F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vpQ-vY-RCs"/>
                 </constraints>
             </tableViewCellContentView>
