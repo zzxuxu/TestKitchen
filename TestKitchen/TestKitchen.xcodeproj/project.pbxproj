@@ -57,6 +57,11 @@
 		217AAE7F1DBF09F300B5D815 /* IngreLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217AAE7D1DBF09F300B5D815 /* IngreLikeCell.swift */; };
 		217AAE801DBF09F300B5D815 /* IngreLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217AAE7E1DBF09F300B5D815 /* IngreLikeCell.xib */; };
 		219A7CAE1DBD9BF4006E11E9 /* Controllers.json in Resources */ = {isa = PBXBuildFile; fileRef = 219A7CAD1DBD9BF4006E11E9 /* Controllers.json */; };
+		21A3FD071DC2E08C001375EB /* IngreSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3FD051DC2E08C001375EB /* IngreSceneCell.swift */; };
+		21A3FD081DC2E08C001375EB /* IngreSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A3FD061DC2E08C001375EB /* IngreSceneCell.xib */; };
+		21A3FD0A1DC2E587001375EB /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 21A3FD091DC2E587001375EB /* play.png */; };
+		21A3FD0D1DC300DE001375EB /* IngreSceneListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3FD0B1DC300DD001375EB /* IngreSceneListCell.swift */; };
+		21A3FD0E1DC300DE001375EB /* IngreSceneListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21A3FD0C1DC300DE001375EB /* IngreSceneListCell.xib */; };
 		21BC06721DBDACDF008893B1 /* KTCDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC06711DBDACDF008893B1 /* KTCDownload.swift */; };
 		21BC06741DBDB6CC008893B1 /* IngreRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC06731DBDB6CC008893B1 /* IngreRecommend.swift */; };
 		21BD570D1DC1955B00353C9D /* IngreTodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BD570B1DC1955B00353C9D /* IngreTodayCell.swift */; };
@@ -142,6 +147,11 @@
 		217AAE7D1DBF09F300B5D815 /* IngreLikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreLikeCell.swift; sourceTree = "<group>"; };
 		217AAE7E1DBF09F300B5D815 /* IngreLikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreLikeCell.xib; sourceTree = "<group>"; };
 		219A7CAD1DBD9BF4006E11E9 /* Controllers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Controllers.json; sourceTree = "<group>"; };
+		21A3FD051DC2E08C001375EB /* IngreSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreSceneCell.swift; sourceTree = "<group>"; };
+		21A3FD061DC2E08C001375EB /* IngreSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreSceneCell.xib; sourceTree = "<group>"; };
+		21A3FD091DC2E587001375EB /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		21A3FD0B1DC300DD001375EB /* IngreSceneListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreSceneListCell.swift; sourceTree = "<group>"; };
+		21A3FD0C1DC300DE001375EB /* IngreSceneListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngreSceneListCell.xib; sourceTree = "<group>"; };
 		21BC06711DBDACDF008893B1 /* KTCDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTCDownload.swift; sourceTree = "<group>"; };
 		21BC06731DBDB6CC008893B1 /* IngreRecommend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreRecommend.swift; sourceTree = "<group>"; };
 		21BD570B1DC1955B00353C9D /* IngreTodayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreTodayCell.swift; sourceTree = "<group>"; };
@@ -458,6 +468,10 @@
 				21BD57131DC1AFA600353C9D /* IngreHeaderView.swift */,
 				21BD570B1DC1955B00353C9D /* IngreTodayCell.swift */,
 				21BD570C1DC1955B00353C9D /* IngreTodayCell.xib */,
+				21A3FD051DC2E08C001375EB /* IngreSceneCell.swift */,
+				21A3FD061DC2E08C001375EB /* IngreSceneCell.xib */,
+				21A3FD0B1DC300DD001375EB /* IngreSceneListCell.swift */,
+				21A3FD0C1DC300DE001375EB /* IngreSceneListCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -668,6 +682,7 @@
 				21BD570F1DC19A5400353C9D /* play-A@2x.png */,
 				21BD57101DC19A5400353C9D /* play-A@3x.png */,
 				215749311DC0551100D614E0 /* search1.png */,
+				21A3FD091DC2E587001375EB /* play.png */,
 			);
 			path = "食材";
 			sourceTree = "<group>";
@@ -806,6 +821,7 @@
 			files = (
 				217AAE7C1DBEF82000B5D815 /* sdefaultImage.png in Resources */,
 				215E1E841DB9AF8800F7C877 /* home_normal@2x.png in Resources */,
+				21A3FD081DC2E08C001375EB /* IngreSceneCell.xib in Resources */,
 				219A7CAE1DBD9BF4006E11E9 /* Controllers.json in Resources */,
 				215E1E931DB9AF8800F7C877 /* shop_select@3x.png in Resources */,
 				215E1E861DB9AF8800F7C877 /* home_select@2x.png in Resources */,
@@ -827,11 +843,13 @@
 				21BD570E1DC1955B00353C9D /* IngreTodayCell.xib in Resources */,
 				215E1E8A1DB9AF8800F7C877 /* mine_select@2x.png in Resources */,
 				215749321DC0551100D614E0 /* search1.png in Resources */,
+				21A3FD0E1DC300DE001375EB /* IngreSceneListCell.xib in Resources */,
 				215E1E881DB9AF8800F7C877 /* mine_normal@2x.png in Resources */,
 				215E1E911DB9AF8800F7C877 /* shop_normal@3x.png in Resources */,
 				215E1E891DB9AF8800F7C877 /* mine_normal@3x.png in Resources */,
 				215749361DC0598F00D614E0 /* IngreRedPacketCell.xib in Resources */,
 				215E1E811DB9AF8800F7C877 /* community_normal@3x.png in Resources */,
+				21A3FD0A1DC2E587001375EB /* play.png in Resources */,
 				21BD57121DC19A5400353C9D /* play-A@3x.png in Resources */,
 				215E1E4C1DB9A89100F7C877 /* Main.storyboard in Resources */,
 				215E1E8D1DB9AF8800F7C877 /* shike_normal@3x.png in Resources */,
@@ -921,6 +939,7 @@
 				217AAE7F1DBF09F300B5D815 /* IngreLikeCell.swift in Sources */,
 				21BD570D1DC1955B00353C9D /* IngreTodayCell.swift in Sources */,
 				215E1E571DB9AA2E00F7C877 /* MallViewController.swift in Sources */,
+				21A3FD0D1DC300DE001375EB /* IngreSceneListCell.swift in Sources */,
 				217AAE761DBEED4B00B5D815 /* IngreRecommendView.swift in Sources */,
 				215E1E991DB9BB8C00F7C877 /* UIButton+Common.swift in Sources */,
 				215E1E611DB9AB7E00F7C877 /* MainTabBarViewController.swift in Sources */,
@@ -928,6 +947,7 @@
 				215E1E5F1DB9AA9300F7C877 /* ProfileViewController.swift in Sources */,
 				215749301DC0538100D614E0 /* IngreLikeHeaderView.swift in Sources */,
 				215E1E971DB9BA2100F7C877 /* UILabel+Common.swift in Sources */,
+				21A3FD071DC2E08C001375EB /* IngreSceneCell.swift in Sources */,
 				21BD57141DC1AFA600353C9D /* IngreHeaderView.swift in Sources */,
 				215E1E531DB9A9D800F7C877 /* IngredientViewController.swift in Sources */,
 				215E1E491DB9A89100F7C877 /* AppDelegate.swift in Sources */,
@@ -1083,10 +1103,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WJX.TestKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1098,10 +1120,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestKitchen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WJX.TestKitchen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

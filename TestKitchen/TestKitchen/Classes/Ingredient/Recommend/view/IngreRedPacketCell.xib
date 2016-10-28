@@ -26,7 +26,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="scollView" destination="84l-HI-U9H" id="DoY-be-BSL"/>
+                <outlet property="scrollView" destination="84l-HI-U9H" id="eIn-ZI-iM4"/>
             </connections>
             <point key="canvasLocation" x="450.5" y="358.5"/>
         </tableViewCell>

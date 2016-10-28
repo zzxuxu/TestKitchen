@@ -10,9 +10,11 @@ import UIKit
 
 //定义食材首页widget列表的类型
 public enum IngreWidgetType:Int {
-    case GuessYouLike = 1 // 猜你喜欢
-    case RedPacket = 2 //红包入口
-    case TodayNew = 5 //今日新品
+    case GuessYouLike = 1  // 猜你喜欢
+    case RedPacket = 2     //红包入口
+    case TodayNew = 5      //今日新品
+    case Scene = 3         //早餐日记等
+    case SceneList = 9     //全部场景
 }
 
 class IngreRecommendView: UIView {
@@ -87,10 +89,12 @@ extension IngreRecommendView:UITableViewDelegate,UITableViewDataSource {
             //获取list对象
             let listModel = model?.data?.widgetList![section-1]
 
-            if (listModel?.widget_type?.integerValue)! == IngreWidgetType.GuessYouLike.rawValue || (listModel?.widget_type?.integerValue)! == IngreWidgetType.RedPacket.rawValue || (listModel?.widget_type?.integerValue)! == IngreWidgetType.TodayNew.rawValue{
+            if (listModel?.widget_type?.integerValue)! == IngreWidgetType.GuessYouLike.rawValue || (listModel?.widget_type?.integerValue)! == IngreWidgetType.RedPacket.rawValue || (listModel?.widget_type?.integerValue)! == IngreWidgetType.TodayNew.rawValue || (listModel?.widget_type?.integerValue)! == IngreWidgetType.Scene.rawValue || (listModel?.widget_type?.integerValue)! == IngreWidgetType.SceneList.rawValue{
                 //猜你喜欢
                 //红包入口
                 //今日新品
+                //早餐日记等
+                //全部场景
                 row = 1
             }
 
@@ -118,6 +122,12 @@ extension IngreRecommendView:UITableViewDelegate,UITableViewDataSource {
             }else if listModel?.widget_type?.integerValue == IngreWidgetType.TodayNew.rawValue {
                 //今日新品
                 height = 280
+            }else if listModel?.widget_type?.integerValue == IngreWidgetType.Scene.rawValue {
+                //早餐日记等
+                height = 200
+            }else if listModel?.widget_type?.integerValue == IngreWidgetType.SceneList.rawValue {
+                //全部场景
+                height = 70
             }
 
         }
@@ -150,7 +160,7 @@ extension IngreRecommendView:UITableViewDelegate,UITableViewDataSource {
                 
                 return cell
             }else if listModel?.widget_type?.integerValue == IngreWidgetType.RedPacket.rawValue {
-                //猜你喜欢
+                //红包入口
                 let cell = IngreRedPacketCell.createRedPacketCellFor(tableView, atindexPath: indexPath, listModel: listModel!)
                 //点击事件
                 cell.jumpClosure = jumpClosure
@@ -158,8 +168,24 @@ extension IngreRecommendView:UITableViewDelegate,UITableViewDataSource {
                 return cell
 
             }else if listModel?.widget_type?.integerValue == IngreWidgetType.TodayNew.rawValue {
-                //猜你喜欢
+                //今日新品
                 let cell = IngreTodayCell.createTodayCellFor(tableView, atIndexPath: indexPath, listModel: listModel!)
+                //点击事件
+                cell.jumpClosure = jumpClosure
+
+                return cell
+                
+            }else if listModel?.widget_type?.integerValue == IngreWidgetType.Scene.rawValue {
+                //早餐日记等
+                let cell = IngreSceneCell.createSceneCellFor(tableView, atIndexPath: indexPath, listmodel: listModel)
+                //点击事件
+                cell.jumpClosure = jumpClosure
+
+                return cell
+
+            }else if listModel?.widget_type?.integerValue == IngreWidgetType.SceneList.rawValue {
+                //早餐日记等
+                let cell = IngreSceneListCell.createSceneListCellFor(tableView, atIndexPath: indexPath, listmodel: listModel)
                 //点击事件
                 cell.jumpClosure = jumpClosure
 
@@ -182,10 +208,14 @@ extension IngreRecommendView:UITableViewDelegate,UITableViewDataSource {
                 //猜你喜欢分组的header
                 let likeHeaderView = IngreLikeHeaderView(frame: CGRectMake(0,0,tbView!.bounds.width,44))
                 return likeHeaderView
-            }else if listModel?.widget_type?.integerValue == IngreWidgetType.TodayNew.rawValue {
-                //猜你今日新品的header
+            }else if listModel?.widget_type?.integerValue == IngreWidgetType.TodayNew.rawValue || listModel?.widget_type?.integerValue == IngreWidgetType.Scene.rawValue {
+                //今日新品的header
+                //早餐日记等
                 let headView = IngreHeaderView(frame: CGRectMake(0,0,kScreenW,54))
-                headView.configText((listModel?.title)!)
+                headView.jumpClosure = jumpClosure
+                headView.listModel = listModel
+
+                return headView
 
             }
         }
@@ -201,8 +231,11 @@ extension IngreRecommendView:UITableViewDelegate,UITableViewDataSource {
 
             let listModel = model?.data?.widgetList![section-1]
             if listModel?.widget_type?.integerValue == IngreWidgetType.GuessYouLike.rawValue {
+                //猜你喜欢
                 height = 44
-            }else if listModel?.widget_type?.integerValue == IngreWidgetType.TodayNew.rawValue {
+            }else if listModel?.widget_type?.integerValue == IngreWidgetType.TodayNew.rawValue || listModel?.widget_type?.integerValue == IngreWidgetType.Scene.rawValue {
+                //今日新品
+                //早餐日记等
                 height = 54
             }
         }

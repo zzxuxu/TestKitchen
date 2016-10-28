@@ -18,7 +18,7 @@ class IngreRedPacketCell: UITableViewCell {
     //容器子视图
     private var containerView:UIView?
     
-    @IBOutlet weak var scollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     //数据
     var listModel:IngreRecommendwidgetList?{
@@ -38,12 +38,10 @@ class IngreRedPacketCell: UITableViewCell {
         if listModel?.widget_data?.count > 0 {
 
             containerView = UIView.createView()
-            containerView!.tag = 200
-
-            scollView.addSubview(containerView!)
-            containerView!.snp_makeConstraints(closure: { (make) in
-                make.edges.equalTo(self.scollView)
-                make.height.equalTo(self.scollView)
+            scrollView.addSubview(containerView!)
+            containerView!.snp_makeConstraints(closure: {[weak self] (make) in
+                make.edges.equalTo((self?.scrollView)!)
+                make.height.equalTo((self?.scrollView)!)
             })
 
             //上一次的视图
@@ -51,6 +49,7 @@ class IngreRedPacketCell: UITableViewCell {
 
             let cnt = listModel?.widget_data?.count
             for i in 0..<cnt! {
+
                 let data = listModel?.widget_data![i]
 
                 if data?.type == "image" {
@@ -68,11 +67,14 @@ class IngreRedPacketCell: UITableViewCell {
 
                     //约束
                     tmpImageView.snp_makeConstraints(closure: { (make) in
+
                         make.top.bottom.equalTo(containerView!)
                         make.width.equalTo(210)
                         if i == 0 {
-                            let x = (CGFloat(210*cnt!)-scollView.bounds.width)/2
-//                            scollView.contentOffset = CGPointMake(x, 0)
+
+                            //将滚动视图显示在最中间
+                            let x = (CGFloat(210*cnt!)-scrollView.bounds.size.width)/2
+
                             make.left.equalTo(containerView!).offset(-x)
                         }else{
                             make.left.equalTo((lastView?.snp_right)!)
@@ -89,10 +91,10 @@ class IngreRedPacketCell: UITableViewCell {
                 make.right.equalTo(lastView!)
             })
 
-            scollView.showsHorizontalScrollIndicator = false
-            scollView.showsVerticalScrollIndicator = false
+            scrollView.showsHorizontalScrollIndicator = false
+            scrollView.showsVerticalScrollIndicator = false
 
-            scollView.delegate = self
+            scrollView.delegate = self
 
             //将滚动视图显示在最中间
 //            let x = (CGFloat(210*cnt!)-scollView.bounds.width)/2
@@ -140,7 +142,7 @@ class IngreRedPacketCell: UITableViewCell {
     
 }
 
-//UIScrollView代理
+//MARK:UIScrollView代理
 extension IngreRedPacketCell: UIScrollViewDelegate {
 
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
@@ -148,11 +150,18 @@ extension IngreRedPacketCell: UIScrollViewDelegate {
         let firstImageView = containerView!.viewWithTag(300)
         if firstImageView?.isKindOfClass(UIImageView) == true {
 
-            firstImageView?.snp_makeConstraints(closure: { (make) in
+            firstImageView?.snp_updateConstraints(closure: { (make) in
                 make.left.equalTo(containerView!)
             })
 
         }
     }
-
 }
+
+
+
+
+
+
+
+
