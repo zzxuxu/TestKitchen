@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        (UINavigationBar.appearance()).setBackgroundImage(UIImage(named: "navBar"), forBarMetrics: .Default)
+
         let mainCtrl = MainTabBarViewController()
         window?.rootViewController = mainCtrl
 

@@ -105,7 +105,7 @@ class IngreBannerCell: UITableViewCell {
     }
 
     //创建cell的方法
-    class func createBannerCellFor(tableView:UITableView,atIndexPath indexPath:NSIndexPath, bannerArray: Array<IngreRecommendBanner>) ->IngreBannerCell {
+    class func createBannerCellFor(tableView:UITableView,atIndexPath indexPath:NSIndexPath, bannerArray: Array<IngreRecommendBanner>?) ->IngreBannerCell {
 
         //重用标志
         let cellId = "ingreBannerCellId"

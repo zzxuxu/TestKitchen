@@ -35,7 +35,7 @@ class IngreRecommend: NSObject {
 }
 
 class IngreRecommendData: NSObject {
-    var banner: Array<IngreRecommendBanner>?
+    var bannerArray: Array<IngreRecommendBanner>?
     var widgetList:Array<IngreRecommendwidgetList>?
 
     //解析
@@ -43,14 +43,14 @@ class IngreRecommendData: NSObject {
         let model = IngreRecommendData()
 
         //广告数据
-        var tmpBanner = Array<IngreRecommendBanner>()
+        var tmpBannerArray = Array<IngreRecommendBanner>()
 
         for (_, subjson):(String, JSON) in json["banner"] {
             let bannerModel = IngreRecommendBanner.parseModel(subjson)
-            tmpBanner.append(bannerModel)
+            tmpBannerArray.append(bannerModel)
         }
 
-        model.banner = tmpBanner
+        model.bannerArray = tmpBannerArray
 
         //列表数据
         var tmpList = Array<IngreRecommendwidgetList>()
