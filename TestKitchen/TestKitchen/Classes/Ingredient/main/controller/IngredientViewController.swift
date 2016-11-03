@@ -22,6 +22,9 @@ class IngredientViewController: BaseViewController {
     //分类视图
     private var categoryView: IngreMaterrialView?
 
+    //导航上面的选择控件
+    private var segCtrl:KTCSegCtrl?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        view.backgroundColor = UIColor.yellowColor()
@@ -32,9 +35,42 @@ class IngredientViewController: BaseViewController {
         //导航
         createNav()
 
+        //创建首页视图
         createHomePage()
 
+        //下载首页的推荐数据
         downloadRecommendData()
+
+        //下载首页食材数据
+        downLoadRecommendMaterial()
+
+        //下载首页分类数据
+        downLoadCategoryData()
+    }
+
+    //下载首页分类数据
+    func downLoadCategoryData() {
+        //methodName=CategoryIndex
+
+        let dict = ["methodName":"CategoryIndex"]
+
+        let downloader = KTCDownload()
+        downloader.delegate = self
+        downloader.downloadType = KTCDownloadType.IngreCategory
+        downloader.postWithUrl(kHostUrl, params: dict)
+
+    }
+
+    //下载首页食材数据
+    func downLoadRecommendMaterial() {
+        //methodName=MaterialSubtype&token=&user_id=&version=4.32
+
+        let dict = ["methodName":"MaterialSubtype"]
+
+        let downloader = KTCDownload()
+        downloader.delegate = self
+        downloader.downloadType = KTCDownloadType.IngreMaterial
+        downloader.postWithUrl(kHostUrl, params: dict)
     }
 
     //创建首页视图
@@ -42,6 +78,7 @@ class IngredientViewController: BaseViewController {
 
         scrollView = UIScrollView()
         scrollView!.pagingEnabled = true
+        scrollView?.delegate = self
         view.addSubview(scrollView!)
 
         scrollView!.snp_makeConstraints { (make) in
@@ -106,8 +143,8 @@ class IngredientViewController: BaseViewController {
 
         //选择控件
         let frame = CGRectMake(80, 0, kScreenW-80*2, 44)
-        let segCtrl = KTCSegCtrl(frame: frame, titleArray: ["推荐","食材","分类"])
-        segCtrl.delegate = self
+        segCtrl = KTCSegCtrl(frame: frame, titleArray: ["推荐","食材","分类"])
+        segCtrl!.delegate = self
         navigationItem.titleView = segCtrl
 
     }
@@ -126,10 +163,11 @@ class IngredientViewController: BaseViewController {
     func downloadRecommendData(){
         //methodName=SceneHome&token=&user_id=&version=4.5
 
-        let params = ["methodName":"SceneHome","token":"","user_id":"","version":"4.5"]
-
+        let params = ["methodName":"SceneHome"]
+ 
         let downloader = KTCDownload()
         downloader.delegate = self
+        downloader.downloadType = .IngreRecommend
         downloader.postWithUrl(kHostUrl, params: params)
 
     }
@@ -150,29 +188,73 @@ extension IngredientViewController:KTCDownloadDelegate {
 
     //下载成功
     func downloader(downloader: KTCDownload, didFinishWithData data: NSData?) {
-//        let str = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//        print(str!)
 
-        if let tmpData = data {
-            //1.json解析
-            let recommendModel = IngreRecommend.parseData(tmpData)
-            
-            //2.显示UI
-//            let recommendView = IngreRecommendView(frame: CGRectZero)
-            recommendView!.model = recommendModel
-//            view.addSubview(recommendView)
+        if downloader.downloadType == KTCDownloadType.IngreRecommend {
+            //推荐
+            if let tmpData = data {
+                //1.json解析
+                let recommendModel = IngreRecommend.parseData(tmpData)
 
-            //3.点击食材的推荐页面的某一部分，跳转到后面的界面
-            recommendView!.jumpClosure = { jumpUrl in
-                print(jumpUrl)
+                //2.显示UI
+                //            let recommendView = IngreRecommendView(frame: CGRectZero)
+                recommendView!.model = recommendModel
+                //            view.addSubview(recommendView)
+
+                //3.点击食材的推荐页面的某一部分，跳转到后面的界面
+                recommendView!.jumpClosure = {[weak self] jumpUrl in
+                    self?.handleClickEvent(jumpUrl)
+                }
             }
+
+        }else if downloader.downloadType == KTCDownloadType.IngreMaterial {
+            //食材
+            if let tmpData = data {
+                //1.json解析
+                let materialModel = IngreMaterial.parseData(tmpData)
+
+                //2.显示UI
+                //            let recommendView = IngreRecommendView(frame: CGRectZero)
+                materiaView!.model = materialModel
+                //            view.addSubview(recommendView)
+
+                //点击事件
+                materiaView!.jumpClosure = {[weak self] jumpUrl in
+                    self?.handleClickEvent(jumpUrl)
+                }
+            }
+
+        }else if downloader.downloadType == KTCDownloadType.IngreCategory {
+            //分类
+            if let tmpData = data {
+                //1.json解析
+                let categoryModel = IngreMaterial.parseData(tmpData)
+
+                //2.显示UI
+                //            let recommendView = IngreRecommendView(frame: CGRectZero)
+                categoryView!.model = categoryModel
+                //            view.addSubview(recommendView)
+
+                //点击事件
+                categoryView!.jumpClosure = {[weak self] jumpUrl in
+                    self?.handleClickEvent(jumpUrl)
+                }
+            }
+
+        }
+
+
 
             //约束
 //            recommendView.snp_makeConstraints(closure: { (make) in
 //                make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))
 //            })
 
-        }
+
+    }
+
+    //处理点击事件的方法
+    func handleClickEvent(urlString:String) {
+        IngreService.handleEvent(urlString, onViewController: self)
     }
 
 }
@@ -187,6 +269,16 @@ extension IngredientViewController:KTCSegCtrlDelegate {
 
 
 
+//MARK:UIScrollView的代理
+extension IngredientViewController:UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let index = scrollView.contentOffset.x/scrollView.bounds.width
+
+        segCtrl?.selectIndex = Int(index)
+    }
+
+    
+}
 
 
 

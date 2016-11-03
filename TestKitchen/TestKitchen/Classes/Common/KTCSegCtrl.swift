@@ -20,27 +20,36 @@ class KTCSegCtrl: UIView {
     //代理属性
     weak var delegate: KTCSegCtrlDelegate?
 
+    private var lineView:UIImageView?
+
     //设置当前序号
     var selectIndex: Int = 0 {
         didSet {
-            print(oldValue)
+//            print(oldValue)
+            if selectIndex != oldValue {
 
-            //取消之前的选中状态
-            let lastBtn = viewWithTag(300+oldValue)
-            if lastBtn?.isKindOfClass(KTCSegBtn) == true {
-                let tmpBtn = lastBtn as! KTCSegBtn
-                tmpBtn.clicked = false
+                //取消之前的选中状态
+                let lastBtn = viewWithTag(300+oldValue)
+                if lastBtn?.isKindOfClass(KTCSegBtn) == true {
+                    let tmpBtn = lastBtn as! KTCSegBtn
+                    tmpBtn.clicked = false
+                }
 
+                //选中当前点击的按钮
+                let curBtn = viewWithTag(300+selectIndex)
+                if curBtn?.isKindOfClass(KTCSegBtn) == true {
+                    let tmpBtn = curBtn as! KTCSegBtn
+                    tmpBtn.clicked = true
+                    
+                }
+
+                //修改下划线的位置
+                UIView.animateWithDuration(0.1, animations: {
+
+                    self.lineView?.frame.origin.x = (self.lineView?.frame.size.width)!*CGFloat(self.selectIndex)
+
+                })
             }
-
-            //选中当前点击的按钮
-            let curBtn = viewWithTag(300+selectIndex)
-            if curBtn?.isKindOfClass(KTCSegBtn) == true {
-                let tmpBtn = curBtn as! KTCSegBtn
-                tmpBtn.clicked = true
-
-            }
-
         }
     }
 
@@ -54,6 +63,8 @@ class KTCSegCtrl: UIView {
         if titleArray.count > 0 {
             createBtns(titleArray)
         }
+
+
 
     }
 
@@ -84,6 +95,12 @@ class KTCSegCtrl: UIView {
             addSubview(btn)
 
         }
+
+        //下划线
+        lineView = UIImageView(frame: CGRectMake(0, bounds.size.height-2, w, 2))
+//        lineView?.image = UIImage(named: "navBtn_bag")
+        lineView?.backgroundColor = UIColor.orangeColor()
+        addSubview(lineView!)
 
     }
 

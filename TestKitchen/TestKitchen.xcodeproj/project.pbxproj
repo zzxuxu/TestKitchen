@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21496C081DCAD2BB0000204F /* IngreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C071DCAD2BB0000204F /* IngreService.swift */; };
+		21496C0A1DCAD34D0000204F /* FoodCourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C091DCAD34D0000204F /* FoodCourseService.swift */; };
+		21496C0C1DCAD3C80000204F /* WebViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C0B1DCAD3C80000204F /* WebViewService.swift */; };
+		21496C0E1DCAD3E40000204F /* FoodMatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C0D1DCAD3E40000204F /* FoodMatchService.swift */; };
+		21496C101DCAD3F70000204F /* SceneListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C0F1DCAD3F70000204F /* SceneListService.swift */; };
+		21496C121DCAD40B0000204F /* FavouriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C111DCAD40B0000204F /* FavouriteService.swift */; };
+		21496C141DCAD41C0000204F /* SceneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C131DCAD41C0000204F /* SceneService.swift */; };
+		21496C161DCAD42C0000204F /* DishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C151DCAD42C0000204F /* DishService.swift */; };
+		21496C181DCAD4390000204F /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C171DCAD4390000204F /* VideoService.swift */; };
+		21496C1A1DCAD45E0000204F /* RecommendTalnetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C191DCAD45E0000204F /* RecommendTalnetService.swift */; };
+		21496C1C1DCAD46E0000204F /* TalnetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C1B1DCAD46E0000204F /* TalnetService.swift */; };
+		21496C1E1DCAD4890000204F /* BoutiquepostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C1D1DCAD4890000204F /* BoutiquepostService.swift */; };
+		21496C201DCAD4960000204F /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C1F1DCAD4960000204F /* PostService.swift */; };
+		21496C221DCAD4AD0000204F /* SubjectListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C211DCAD4AD0000204F /* SubjectListService.swift */; };
+		21496C241DCAD4BA0000204F /* MateriaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C231DCAD4BA0000204F /* MateriaService.swift */; };
+		21496C261DCADDF70000204F /* FoodCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C251DCADDF70000204F /* FoodCourseController.swift */; };
+		21496C281DCAE22E0000204F /* FoodCourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21496C271DCAE22E0000204F /* FoodCourseDetail.swift */; };
+		214C66291DC97FE500062A90 /* IngreMetrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C66281DC97FE500062A90 /* IngreMetrial.swift */; };
+		214C662B1DC990AF00062A90 /* IngreMaterialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214C662A1DC990AF00062A90 /* IngreMaterialCell.swift */; };
 		215749301DC0538100D614E0 /* IngreLikeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2157492F1DC0538100D614E0 /* IngreLikeHeaderView.swift */; };
 		215749321DC0551100D614E0 /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = 215749311DC0551100D614E0 /* search1.png */; };
 		215749351DC0598F00D614E0 /* IngreRedPacketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215749331DC0598F00D614E0 /* IngreRedPacketCell.swift */; };
@@ -106,6 +125,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21496C071DCAD2BB0000204F /* IngreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreService.swift; sourceTree = "<group>"; };
+		21496C091DCAD34D0000204F /* FoodCourseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCourseService.swift; sourceTree = "<group>"; };
+		21496C0B1DCAD3C80000204F /* WebViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewService.swift; sourceTree = "<group>"; };
+		21496C0D1DCAD3E40000204F /* FoodMatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMatchService.swift; sourceTree = "<group>"; };
+		21496C0F1DCAD3F70000204F /* SceneListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneListService.swift; sourceTree = "<group>"; };
+		21496C111DCAD40B0000204F /* FavouriteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteService.swift; sourceTree = "<group>"; };
+		21496C131DCAD41C0000204F /* SceneService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneService.swift; sourceTree = "<group>"; };
+		21496C151DCAD42C0000204F /* DishService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishService.swift; sourceTree = "<group>"; };
+		21496C171DCAD4390000204F /* VideoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
+		21496C191DCAD45E0000204F /* RecommendTalnetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendTalnetService.swift; sourceTree = "<group>"; };
+		21496C1B1DCAD46E0000204F /* TalnetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalnetService.swift; sourceTree = "<group>"; };
+		21496C1D1DCAD4890000204F /* BoutiquepostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoutiquepostService.swift; sourceTree = "<group>"; };
+		21496C1F1DCAD4960000204F /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		21496C211DCAD4AD0000204F /* SubjectListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectListService.swift; sourceTree = "<group>"; };
+		21496C231DCAD4BA0000204F /* MateriaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MateriaService.swift; sourceTree = "<group>"; };
+		21496C251DCADDF70000204F /* FoodCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCourseController.swift; sourceTree = "<group>"; };
+		21496C271DCAE22E0000204F /* FoodCourseDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCourseDetail.swift; sourceTree = "<group>"; };
+		214C66281DC97FE500062A90 /* IngreMetrial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreMetrial.swift; sourceTree = "<group>"; };
+		214C662A1DC990AF00062A90 /* IngreMaterialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreMaterialCell.swift; sourceTree = "<group>"; };
 		2157492F1DC0538100D614E0 /* IngreLikeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreLikeHeaderView.swift; sourceTree = "<group>"; };
 		215749311DC0551100D614E0 /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
 		215749331DC0598F00D614E0 /* IngreRedPacketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngreRedPacketCell.swift; sourceTree = "<group>"; };
@@ -220,6 +258,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21496C061DCAD27E0000204F /* service */ = {
+			isa = PBXGroup;
+			children = (
+				21496C071DCAD2BB0000204F /* IngreService.swift */,
+				21496C091DCAD34D0000204F /* FoodCourseService.swift */,
+				21496C0B1DCAD3C80000204F /* WebViewService.swift */,
+				21496C0D1DCAD3E40000204F /* FoodMatchService.swift */,
+				21496C0F1DCAD3F70000204F /* SceneListService.swift */,
+				21496C111DCAD40B0000204F /* FavouriteService.swift */,
+				21496C131DCAD41C0000204F /* SceneService.swift */,
+				21496C151DCAD42C0000204F /* DishService.swift */,
+				21496C171DCAD4390000204F /* VideoService.swift */,
+				21496C191DCAD45E0000204F /* RecommendTalnetService.swift */,
+				21496C1B1DCAD46E0000204F /* TalnetService.swift */,
+				21496C1D1DCAD4890000204F /* BoutiquepostService.swift */,
+				21496C1F1DCAD4960000204F /* PostService.swift */,
+				21496C211DCAD4AD0000204F /* SubjectListService.swift */,
+				21496C231DCAD4BA0000204F /* MateriaService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
 		215E1DC11DB9A51600F7C877 = {
 			isa = PBXGroup;
 			children = (
@@ -356,10 +416,11 @@
 		215E1E291DB9A89100F7C877 /* Ingredient */ = {
 			isa = PBXGroup;
 			children = (
+				21496C061DCAD27E0000204F /* service */,
 				215E1E2E1DB9A89100F7C877 /* main */,
 				215E1E361DB9A89100F7C877 /* Recommend */,
-				215E1E2A1DB9A89100F7C877 /* category */,
 				215E1E321DB9A89100F7C877 /* Material */,
+				215E1E2A1DB9A89100F7C877 /* category */,
 			);
 			path = Ingredient;
 			sourceTree = "<group>";
@@ -449,6 +510,7 @@
 		215E1E341DB9A89100F7C877 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				214C66281DC97FE500062A90 /* IngreMetrial.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -457,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				21654A4A1DC8442C00D4DF1A /* IngreMaterrialView.swift */,
+				214C662A1DC990AF00062A90 /* IngreMaterialCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -474,6 +537,7 @@
 		215E1E371DB9A89100F7C877 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				21496C251DCADDF70000204F /* FoodCourseController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -481,6 +545,7 @@
 		215E1E381DB9A89100F7C877 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				21496C271DCAE22E0000204F /* FoodCourseDetail.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -981,29 +1046,48 @@
 			files = (
 				215E1E4F1DB9A89100F7C877 /* ViewController.swift in Sources */,
 				215E1E511DB9A90900F7C877 /* BaseViewController.swift in Sources */,
+				21496C241DCAD4BA0000204F /* MateriaService.swift in Sources */,
+				21496C1A1DCAD45E0000204F /* RecommendTalnetService.swift in Sources */,
 				215E1E951DB9B98200F7C877 /* UIView+Common.swift in Sources */,
 				217AAE791DBEF39400B5D815 /* IngreBannerCell.swift in Sources */,
 				215E1E551DB9AA0B00F7C877 /* CommunityViewController.swift in Sources */,
+				21496C081DCAD2BB0000204F /* IngreService.swift in Sources */,
 				21654A471DC8397B00D4DF1A /* KTCSegCtrl.swift in Sources */,
 				215E1E4E1DB9A89100F7C877 /* TestKitchen.xcdatamodeld in Sources */,
+				214C66291DC97FE500062A90 /* IngreMetrial.swift in Sources */,
 				215749351DC0598F00D614E0 /* IngreRedPacketCell.swift in Sources */,
 				21654A381DC8215F00D4DF1A /* IngreTopicCell.swift in Sources */,
 				21BC06721DBDACDF008893B1 /* KTCDownload.swift in Sources */,
+				21496C0A1DCAD34D0000204F /* FoodCourseService.swift in Sources */,
 				217AAE7F1DBF09F300B5D815 /* IngreLikeCell.swift in Sources */,
 				21EAEA691DC6D11700C2944A /* IngreTalnetCell.swift in Sources */,
+				21496C0E1DCAD3E40000204F /* FoodMatchService.swift in Sources */,
+				21496C261DCADDF70000204F /* FoodCourseController.swift in Sources */,
 				21BD570D1DC1955B00353C9D /* IngreTodayCell.swift in Sources */,
 				215E1E571DB9AA2E00F7C877 /* MallViewController.swift in Sources */,
+				21496C0C1DCAD3C80000204F /* WebViewService.swift in Sources */,
 				21A3FD0D1DC300DE001375EB /* IngreSceneListCell.swift in Sources */,
 				217AAE761DBEED4B00B5D815 /* IngreRecommendView.swift in Sources */,
+				21496C221DCAD4AD0000204F /* SubjectListService.swift in Sources */,
+				21496C1C1DCAD46E0000204F /* TalnetService.swift in Sources */,
+				21496C161DCAD42C0000204F /* DishService.swift in Sources */,
 				215E1E991DB9BB8C00F7C877 /* UIButton+Common.swift in Sources */,
+				21496C281DCAE22E0000204F /* FoodCourseDetail.swift in Sources */,
+				21496C201DCAD4960000204F /* PostService.swift in Sources */,
 				215E1E611DB9AB7E00F7C877 /* MainTabBarViewController.swift in Sources */,
+				21496C101DCAD3F70000204F /* SceneListService.swift in Sources */,
 				215E1E5D1DB9AA7B00F7C877 /* FoodClassViewController.swift in Sources */,
+				21496C121DCAD40B0000204F /* FavouriteService.swift in Sources */,
 				215E1E5F1DB9AA9300F7C877 /* ProfileViewController.swift in Sources */,
 				215749301DC0538100D614E0 /* IngreLikeHeaderView.swift in Sources */,
+				214C662B1DC990AF00062A90 /* IngreMaterialCell.swift in Sources */,
 				215E1E971DB9BA2100F7C877 /* UILabel+Common.swift in Sources */,
+				21496C1E1DCAD4890000204F /* BoutiquepostService.swift in Sources */,
 				21A3FD071DC2E08C001375EB /* IngreSceneCell.swift in Sources */,
+				21496C181DCAD4390000204F /* VideoService.swift in Sources */,
 				21BD57141DC1AFA600353C9D /* IngreHeaderView.swift in Sources */,
 				215E1E531DB9A9D800F7C877 /* IngredientViewController.swift in Sources */,
+				21496C141DCAD41C0000204F /* SceneService.swift in Sources */,
 				215E1E491DB9A89100F7C877 /* AppDelegate.swift in Sources */,
 				21BC06741DBDB6CC008893B1 /* IngreRecommend.swift in Sources */,
 				21EAEA6D1DC6DD5600C2944A /* IngrePostCell.swift in Sources */,
